@@ -392,6 +392,7 @@ form .btn2{
 
 .copyright i{
     color: #ff004f;
+    font-size: small;
 }
 
 /* ----------------css fr small screen------ */
@@ -401,7 +402,8 @@ nav .fa-solid
 }
 
 
-@media only screen and (max-width:600px){
+@media only screen and (max-width:600px)
+{
     #header{
         background-image: url(images/phone-background.jpg);
     }
@@ -468,7 +470,7 @@ flex-basis: 100%;
 }
 
 .copyright{
-    font-size: 40px;
+    font-size: 15px;
 }
 }
 
@@ -511,6 +513,11 @@ flex-basis: 100%;
    
 }
 
+.clock h4
+{
+    flex-basis: 100%;
+}
+
   .seemore
 {
     display: block;
@@ -530,3 +537,8 @@ flex-basis: 100%;
 }
 
 #seemore {display: none;}
+
+.vid-align{
+        border-radius: 20px;
+        transition: transform 0.5s;
+}
