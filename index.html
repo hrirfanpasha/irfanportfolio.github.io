@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="style.css">
 
     <script src="https://kit.fontawesome.com/01c5b72c9e.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
+    
     <div id="header">
         <div class="container">
             <nav>
@@ -21,6 +23,7 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#hobbies">Hobbies</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
@@ -45,7 +48,7 @@
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
                     <p>I am a Fresher, Eager to work in Software testing/Front-end development/Technical support.
-                        And to achieve a position in a company and learn to work and utilize my skills efficiently.</p>
+                        And to achieve a position in a company and learn to work and utilize my skills efficiently.</p><br>
 
                     <ul ><i>
                         <li>Graduation from R V COLLEGE OF ENGINEERING, Bangalore from in 2021.</li>
@@ -97,7 +100,7 @@
 
                     <div class="tab-contents" id="certification">
                         <ul>
-                            <li><span>on-going</span><br>Cisco certified Network Associate (CCNA) course</li>
+                            <li><span>ON-GOING</span><br>Cisco certified Network Associate (CCNA) course</li>
                             <li><span> NPTEL</span><br> Design and Analysis of Algorithms.</li>   
                                <li><span>MOOC</span><br>Introduction to User Experience Design </li>
                                <li><span>GREAT LEARNING PLATFORM</span><br>W3Schools, csharpcorner etc.
@@ -134,7 +137,7 @@
                     <i class="fa-solid fa-code"></i>
                     <h2>Web Design</h2>
                     <p>
-                        What is the Web design?
+                        What is the Web design ?
                         Image result for Web Design
                         Web design is the creation of websites and pages to reflect a company's brand and information and ensure a user-friendly experience
                     </p>
@@ -172,7 +175,7 @@
     <!-- Portfolio -->
     <div id="portfolio">
         <div class="container">
-            <h1 class="sub-title">My Work/ Hobbies</h1><br>
+            <h1 class="sub-title">My Work</h1><br>
             <div class="work-list">
                 <div class="work">
                     <img src="images/work-1.png">
@@ -208,12 +211,57 @@
                 </div>
             </div>
 
-            <a href="#" class="btn"> See more</a>
+            <a href="#" class="seemore"> See more</a>
         </div>
     </div>
 
-    <!-- Contact -->
+<!-- Hobbies -->
 
+
+<div id="hobbies">
+    <div class="container">
+        <h1 class="sub-title">My Hobbies</h1><br>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/hobby-2.jpg">
+                <div class="layer">
+                    <h3>Traveling</h3>
+                    <p>art of living</p>
+                    <ul><p>
+                        If you are seeing my portfolio you would have heard about this place known as the Art of Living International Center was built in 1986 and is founded by humanitarian and spiritual teacher Gurudev Sri Sri Ravi Shankar.
+                        <br><p> Apart from enjoying meditative walks and exploring the breathtaking view of the campus.</p>
+                    </p></ul>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/hobby-3.jpg">
+                <div class="layer">
+                    <h2>Photograpghy</h2><br>
+                    <ul>
+                        <li>“Photography is a way of feeling, of touching, of loving. What you have caught on film is captured forever… It remembers little things, long after you have forgotten everything.”</li><br>
+                        <li>whenever i feel lonely,stressed i travel to the unknown places.</li>
+                    </ul>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/hobby-4.jpg">
+                <div class="layer">
+                    <h2>Nature</h2><br>
+                    <p><ul>
+                         <li>Nature gives escape from reality.</li><br>
+                         <li>Nature and editing is blissful joy for me.There are always two people in every picture: the photographer and the viewer</li>
+                    </ul></p><br>    
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+
+    <!-- Contact -->
     <div id="contact">
         <div class="container">
             <div class="row">
@@ -242,10 +290,12 @@
             </div>
             <div class="copyright">
                 <p>copyright <i class="fa-solid fa-copyright"></i> H R-irfan-pasha</p>
+                <h5>version 1.1</h5>
             </div>
         </div>
-
-
+    </div>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">top</button>
+        <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
 
 
         <script>
@@ -302,6 +352,64 @@
             })
         </script>
 
+
+<!-- hover-button -->
+
+<script>
+    // Get the button:
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop >2000) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+</script>
+
+
+<script>
+    function showTime(){
+    var date = new Date();
+    var h = date.getHours(); // 0 - 23
+    var m = date.getMinutes(); // 0 - 59
+    var s = date.getSeconds(); // 0 - 59
+    var session = "AM";
+    
+    if(h == 0){
+        h = 12;
+    }
+    
+    if(h > 12){
+        h = h - 12;
+        session = "PM";
+    }
+    
+    h = (h < 10) ? "0" + h : h;
+    m = (m < 10) ? "0" + m : m;
+    s = (s < 10) ? "0" + s : s;
+    
+    var time = h + ":" + m + ":" + s + " " + session;
+    document.getElementById("MyClockDisplay").innerText = time;
+    document.getElementById("MyClockDisplay").textContent = time;
+    
+    setTimeout(showTime, 1000);
+    
+}
+
+showTime();
+</script>
 </body>
 
 </html>
+
