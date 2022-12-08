@@ -235,7 +235,7 @@
                     <a href="#"><i class="fa-solid fa-link"></i></a>
                 </div>
             </div>
-            <div class="work">
+        <div class="work">
                 <img src="images/hobby-3.jpg">
                 <div class="layer">
                     <h2>Photograpghy</h2><br>
@@ -246,7 +246,7 @@
                     <a href="#"><i class="fa-solid fa-link"></i></a>
                 </div>
             </div>
-            <div class="work">
+    <div class="work">
                 <img src="images/hobby-4.jpg">
                 <div class="layer">
                     <h2>Nature</h2><br>
@@ -370,8 +370,6 @@
             const form = document.forms['submit-to-google-sheet']
             const msg = document.getElementById("msg")
 
-
-
             form.addEventListener('submit', e => {
                 e.preventDefault()
                 fetch(scriptURL, { method: 'POST', body: new FormData(form) })
@@ -385,8 +383,6 @@
                     .catch(error => console.error('Error!', error.message))
             })
         </script>
-
-
 <!-- hover-button -->
 
 <script>
@@ -404,7 +400,6 @@ function scrollFunction() {
   }
 }
 
-// When the user clicks on the button, scroll to the top of the document
 function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
@@ -446,8 +441,6 @@ showTime();
 
 <script>
     function toggleText() {
-
-        // Get all the elements from the page
         var points = 
             document.getElementById("points");
 
@@ -462,32 +455,14 @@ showTime();
         // 'none' (that is hidden) then this 
         // section of code triggers
         if (points.style.display === "none") {
-
-            // Hide the text between the span
-            // elements
             showMoreText.style.display = "none";
-
-            // Show the dots after the text
             points.style.display = "inline";
-
-            // Change the text on button to 
-            // 'Show More'
             buttonText.innerHTML = "Show More";
         }
-
-        // If the hidden portion is revealed,
-        // we will change it back to be hidden
         else {
 
-            // Show the text between the
-            // span elements
             showMoreText.style.display = "inline";
-
-            // Hide the dots after the text
             points.style.display = "none";
-
-            // Change the text on button
-            // to 'Show Less'
             buttonText.innerHTML = "Show Less";
         }
     }
