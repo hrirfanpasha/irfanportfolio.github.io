@@ -542,3 +542,33 @@ flex-basis: 100%;
         border-radius: 20px;
         transition: transform 0.5s;
 }
+
+/*show more/showless*/
+#moreText {
+    display: none;
+}
+
+.seemore1
+{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+   
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.5s;
+}
+
+.seemore1:hover
+{
+    background: #ff004f;
+}
+
+#seemore1 {
+    display: none;
+}
+.seemore1
+{
+    flex-basis: 60%;
+}
