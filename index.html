@@ -212,7 +212,7 @@
                 </div>
             </div>
 
-            <a href="#" class="seemore"> See more</a>
+            <a href="#" class="seemore"> Go to top</a>
         </div>
     </div>
 
@@ -265,11 +265,19 @@
     </div>
 </div><br><br>
 
+
+<!-- see more -->
+<span id="points"></span>
+<button onclick="toggleText()" id="textButton" class="seemore1">
+    Show More
+</button>
+
+<span id="moreText">
 <div class="work-list">
-<div class="work">
-    <div id="hobbies">
-        <div class="container">
-        <center>
+    <div class="work">
+        <div id="hobbies">
+            <div class="container">
+            <center>
             <video width="400" controls class="vid-align" width="320" heigth="240" align="right" controlsList="nodownload">
                 <source src="videos/video-1.mp4" type="video/mp4">
                 <source src="videos/video-1.ogg" type="video/ogg">
@@ -280,11 +288,12 @@
                 <source src="videos/video-2.ogg" type="video/ogg">
                 Your browser does not support HTML video.
             </video>
-        </center>
+            </center>
                 </div>
             </div>
         </div>
   </div>
+</span>
 
     <!-- Contact -->
     <div id="contact">
@@ -315,7 +324,7 @@
             </div>
             <div class="copyright">
                 <p>copyright <i class="fa-solid fa-copyright"></i> H R-irfan-pasha</p>
-                <h5>version 2.0</h5>
+                <h5>version 2.1</h5>
             </div>
         </div>
     </div>
@@ -367,7 +376,7 @@
                 e.preventDefault()
                 fetch(scriptURL, { method: 'POST', body: new FormData(form) })
                     .then(response => {
-                        msg.innerHTML = "Message sent successfully"
+                        msg.innerHTML = "Message sent successfully and recorded. I will be in touch very soon.."
                         setTimeout(function () {
                             msg.innerHTML = ""
                         }, 5000)
@@ -388,7 +397,7 @@ let mybutton = document.getElementById("myBtn");
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop >2000) {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop >3000) {
     mybutton.style.display = "block";
   } else {
     mybutton.style.display = "none";
@@ -434,6 +443,56 @@ function topFunction() {
 
 showTime();
 </script>
+
+<script>
+    function toggleText() {
+
+        // Get all the elements from the page
+        var points = 
+            document.getElementById("points");
+
+        var showMoreText =
+            document.getElementById("moreText");
+
+        var buttonText =
+            document.getElementById("textButton");
+
+        // If the display property of the dots 
+        // to be displayed is already set to 
+        // 'none' (that is hidden) then this 
+        // section of code triggers
+        if (points.style.display === "none") {
+
+            // Hide the text between the span
+            // elements
+            showMoreText.style.display = "none";
+
+            // Show the dots after the text
+            points.style.display = "inline";
+
+            // Change the text on button to 
+            // 'Show More'
+            buttonText.innerHTML = "Show More";
+        }
+
+        // If the hidden portion is revealed,
+        // we will change it back to be hidden
+        else {
+
+            // Show the text between the
+            // span elements
+            showMoreText.style.display = "inline";
+
+            // Hide the dots after the text
+            points.style.display = "none";
+
+            // Change the text on button
+            // to 'Show Less'
+            buttonText.innerHTML = "Show Less";
+        }
+    }
+</script>
+
 </body>
 
 </html>
